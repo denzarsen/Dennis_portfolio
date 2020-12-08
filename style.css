@@ -1,0 +1,255 @@
+* {
+    /*f.eks. padding medregret i totale width af element*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    background: #f4f4f4;
+}
+
+/*GLOBAL ----ting som virker for alt*/
+/*wrapper*/
+.wrapper {
+    /*procent så den er responsiv*/
+    width: 80%;
+    margin: auto;
+    /*width vil fylde 80% af bredden indtil den når 1200px. Derefter vil der være mere white space*/
+    max-width: 1200px;
+    /*hvis noget kommer uden for container får du ikke en scrollbar f.eks. dine bulletpoints stikker ud*/
+    overflow: hidden;
+}
+
+ul {
+    /*ul har pre- margin og padding. Så vi fjerner dem*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+/*---SLUT GLOBAL---*/
+
+
+
+
+
+
+/*----header for hovedmenu-----*/
+
+
+
+/*logo*/
+header #logo{
+    float: left;
+    color: #0B7AF3;
+}
+
+header #logo h1 {
+    margin: 0;
+}
+
+
+
+/*--Nav--*/
+.main-nav {
+    /*viser alle de indre items til flex items. Og opstiller dem horizontalt*/
+    display: flex;
+    align-items: center;
+    /*minimumshøjde, så kan den altid udvide sig efter indhold*/
+    min-height: 70px;
+    padding: 20px 0;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.main-nav ul {
+    /*nu er alle elementerne i listen også vist horizontalt*/
+    display: flex;
+}
+
+.main-nav ul li {
+    /*padding kun til venstre*/
+    padding: 0 0 0 30px;
+}
+
+.main-nav ul li a{
+    color: #0B7AF3;
+    text-decoration: none;
+}
+
+.main-nav ul li a{
+    color: #0B7AF3;
+    text-decoration: none;
+    /*skubber padding for hover stregen længere ned*/
+    padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+       border-bottom: 2px solid #FFF55F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---velkommen----*/
+
+
+ 
+/*Velkommen*/
+.sektion_velkommen {
+    width: 100%;
+    height: 350px;
+    background: url(./billeder/designbillede.jpg) no-repeat center center/cover;
+    margin-bottom: 50px;
+}
+
+.sektion_velkommen .indhold {
+    width: 80%;
+    padding: 50px 0 0 50px;
+    margin-left: 100px;
+    color: white;
+}
+
+.sektion_velkommen h2, .velkommen p {
+    margin-bottom: 20px;
+}
+
+.sektion_velkommen p {
+    margin: 10px 0 20px 0;
+}
+
+/*button*/
+.sektion_velkommen .btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #0B7AF3;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.sektion_velkommen .btn:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----Portfolio------*/
+.sektion_portfolio {
+    /*intet sker før du har defineret columns og rows.*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    margin-bottom: 40px;
+}
+
+/*billederne ville gå ud af deres grid column, hvis ikke vi definerede deres width*/
+.sektion_portfolio img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sektion_portfolio h3 {
+    margin-bottom: 5px;
+}
+
+.sektion_portfolio a {
+    /*det er inline ved default*/
+    display: inline-block;
+    color: #0067b8;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.sektion_portfolio a:hover {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+/*-----kompetencer----*/
+#sektion_kompetencer {
+    margin-top: 30px;
+}
+
+#sektion_kompetencer .box {
+    float: left;
+    width: 23%;
+    padding: 10px;
+    text-align: center;
+}
+
+#sektion_kompetencer .box img{
+    width: 25%;
+    height: auto;
+}
+
+
+
+
+
+/*--Footer---*/
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+
+
+
+
