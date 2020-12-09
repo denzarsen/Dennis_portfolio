@@ -213,6 +213,59 @@ header #logo h1 {
 
 
 
+
+
+
+/*---Om mig---*/
+.container_mig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    margin: auto;
+}
+
+.container_mig img {
+    width: 60%;
+    height: auto;
+}
+
+.container_mig .kompetencer_billede {
+    text-align: right;
+}
+
+.container_mig .kompetencer_tekstboks {
+    text-align: left;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.container_mig .kompetencer_tekstboks p {
+    margin-bottom: 130px;
+}
+
+/*button*/
+.container_mig .btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #0B7AF3;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.container_mig .btn:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
 /*----Kompetencer---*/
 .grid-container-kompetencer {
     display: grid;
@@ -226,32 +279,6 @@ header #logo h1 {
     width: 25%;
     height: auto;
 }
-
-
-
-/*---Om mig---*/
-.container-ommig {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    margin: auto;
-}
-
-.container-ommig img {
-    width: 60%;
-    height: auto;
-}
-
-.container-ommig .kompetencer_billede {
-    text-align: right;
-}
-
-.container-ommig .kompetencer_tekstboks {
-    text-align: left;
-    margin-top: 40px;
-    width: 80%;
-}
-
 
 
 
