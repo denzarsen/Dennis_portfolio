@@ -34,6 +34,14 @@ ul {
 a {
     color: black;
 }
+
+
+/*---Overskrift til sektioner---*/
+.sektion_overskrift {
+    text-align: center;
+    font-size: 30px;
+    margin: 40px 0 40px 0;
+}
 /*---SLUT GLOBAL---*/
 
 
@@ -82,11 +90,6 @@ header #logo h1 {
 .main-nav ul li a{
     color: #0B7AF3;
     text-decoration: none;
-}
-
-.main-nav ul li a{
-    color: #0B7AF3;
-    text-decoration: none;
     /*skubber padding for hover stregen længere ned*/
     padding-bottom: 2px;
 }
@@ -124,6 +127,7 @@ header #logo h1 {
 .sektion_velkommen {
     width: 100%;
     height: 350px;
+    /*image location, repeat, position og size properties*/
     background: url(./billeder/designbillede.jpg) no-repeat center center/cover;
     margin-bottom: 50px;
 }
@@ -172,35 +176,62 @@ header #logo h1 {
 
 
 /*-----Portfolio------*/
-.sektion_portfolio {
+.grid-container {
     /*intet sker før du har defineret columns og rows.*/
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-column-gap: 50px;
     margin-bottom: 40px;
 }
 
+
+.grid-item {
+    margin-bottom: 40px;
+}
+
 /*billederne ville gå ud af deres grid column, hvis ikke vi definerede deres width*/
-.sektion_portfolio img {
+.grid-item img {
     width: 100%;
     margin-bottom: 10px;
 }
 
-.sektion_portfolio h3 {
+.grid-item h3 {
     margin-bottom: 5px;
 }
-
-.sektion_portfolio a {
+.grid-item a {
     /*det er inline ved default*/
     display: inline-block;
     color: #0067b8;
     padding-top: 10px;
     font-weight: bold;
 }
-
-.sektion_portfolio a:hover {
+.grid-item a:hover {
     opacity: 0.5;
 }
+
+
+
+
+/*----Kompetencer---*/
+.grid-container-kompetencer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.grid-container-kompetencer img {
+    width: 25%;
+    height: auto;
+}
+
+
+
+
+
+
+
 
 
 
@@ -217,22 +248,7 @@ header #logo h1 {
 
 
 
-/*-----kompetencer----*/
-#sektion_kompetencer {
-    margin-top: 30px;
-}
 
-#sektion_kompetencer .box {
-    float: left;
-    width: 23%;
-    padding: 10px;
-    text-align: center;
-}
-
-#sektion_kompetencer .box img{
-    width: 25%;
-    height: auto;
-}
 
 
 
