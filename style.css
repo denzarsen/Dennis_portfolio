@@ -179,7 +179,7 @@ header #logo h1 {
 .grid-container {
     /*intet sker før du har defineret columns og rows.*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 50px;
     margin-bottom: 40px;
@@ -209,6 +209,30 @@ header #logo h1 {
 .grid-item a:hover {
     opacity: 0.5;
 }
+
+
+
+
+
+
+
+
+/*----Kompetencer---*/
+.grid-container-kompetencer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+    margin: auto;
+}
+
+.grid-container-kompetencer img {
+    width: 25%;
+    height: auto;
+}
+
+
+
 
 
 
@@ -266,18 +290,35 @@ header #logo h1 {
 
 
 
-/*----Kompetencer---*/
-.grid-container-kompetencer {
+
+
+
+
+
+
+
+
+/*---Kontakt---*/
+.container_kontakt {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
     margin: auto;
 }
 
-.grid-container-kompetencer img {
-    width: 25%;
-    height: auto;
+.container_kontakt .kompetencer_oplysninger {
+    text-align: left;
+    margin-left: 60%;
+    
+}
+
+.container_kontakt .kompetencer_kontakt {
+    text-align: left;
+    width: 80%;
+}
+
+.container_kontakt .kompetencer_kontakt p {
+    margin-bottom: 130px;
 }
 
 
@@ -291,6 +332,18 @@ header #logo h1 {
 
 
 
+
+.underside_boks {
+    text-align: center;
+}
+
+.underside_boks h3 {
+    font-size: 35px;
+}
+
+.underside_boks img {
+    width: 40%;
+}
 
 
  
