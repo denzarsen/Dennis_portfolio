@@ -51,6 +51,21 @@ section {
 h4 {
     font-size: 20px;
 }
+
+/*Burgermenu - knappen*/
+.menu-btn {
+    cursor: pointer;
+    /*taget ud af hjemmesidens normale flow*/
+    position: absolute;
+    /*from top 20px*/
+    top: 20px;
+    /*from right 20px*/
+    right: 20px;
+    /*så den kan flyde oven på eksiterende elementer = svæver*/
+    z-index: 2;
+    /*Ønsker ikke at vise den til desktop version*/
+    display: none;
+}
 /*---SLUT GLOBAL---*/
 
 
@@ -385,6 +400,52 @@ footer p {
 /*----Media queries----*/
 /*only takes effect for 700 pixels or smaller. For tablets*/
 @media (max-width: 700px) {
+
+    /*burgermenu*/
+    .menu-btn {
+        /*nu vises burgermenuen. Ved 700px eller mindre*/
+        display: block;
+    }
+
+    /*links til burgermenuen*/
+    .main-nav ul {
+        display: block;
+        /*taget ud af almindelige flow*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: lightgrey;
+        /*fylder halvdelen af skærmen*/
+        width: 50%;
+        /*40% af højden*/
+        height: 100%;
+        /*x-aksen skubbes til venstre side. Vil fjerne mellemrum der ellers var. 500px er den rykket helt ude af synsvinklen i venstre side*/
+        transform: translate(-500px);
+        /*slide in effekt. Transition venter på transform gør noget, så begynder transitionen*/
+        transition: transform 0.5s ease-in-out;
+        opacity: 0.9;
+        padding: 20px;
+        padding-left: 30px;
+    }
+
+/*style links i burgermenu*/
+    .main-nav ul li {
+        padding: 10px;
+        font-size: 20px;
+        border-bottom: blue 1px solid;
+    }
+
+    /*hvis den har en class med vis endelse bliver den vist*/
+    .main-nav ul.vis {
+        /*hvis den har class med .vis vil den skubbe frem til at være synlig fra 500px til 30px*/
+        transform: translate(-30px);
+    }
+
+
+
+
+
+
     /*velkommen*/
     .sektion_velkommen .indhold {
         margin-left: 0;
@@ -455,66 +516,67 @@ footer p {
 
 /*Mobilenheder. Alt under 500px der begynder layout nemlig at se lid trængt ud*/
 @media (max-width: 500px) {
-    body {
-        font-size: 20px;
-    }
+body {
+    font-size: 20px;
+}
 
-    h4 {
-        font-size: 25px;
-    }
-
-
-    /*Wrapper*/
-    .wrapper {
-        width: 90%;
-    }
-
-     /*velkommen*/
-     .sektion_velkommen .indhold {
-        margin-left: 0;
-        margin: auto;
-        text-align: center;
-        padding: 30px 0 0 0 ;
-    }
+h4 {
+    font-size: 25px;
+}
 
 
-    /*portfolio*/
-    .grid-container {
-    grid-template-columns: 1fr;
-    }
+/*Wrapper*/
+.wrapper {
+    width: 90%;
+}
 
-
-
-    /*kompetencer*/
-    .grid-container-kompetencer {
-    grid-template-columns: 1fr;
-    }
-
-    .grid-container-kompetencer div {
-        margin-bottom: 30px;
-    }
-
-
-
-     /*Om mig*/
-     .container_mig {
-    grid-template-columns: 1fr;
-    }
-
-    /*Kontakt*/
-    .container_kontakt {
-    grid-template-columns: 1fr;
-    }
-
-    /*mobil og email boks*/
-    .container_kontakt .kompetencer_oplysninger {
+    /*velkommen*/
+    .sektion_velkommen .indhold {
+    margin-left: 0;
+    margin: auto;
     text-align: center;
+    padding: 30px 0 0 0 ;
+}
+
+
+/*portfolio*/
+.grid-container {
+grid-template-columns: 1fr;
+}
+
+
+
+/*kompetencer*/
+.grid-container-kompetencer {
+grid-template-columns: 1fr;
+}
+
+.grid-container-kompetencer div {
+    margin-bottom: 30px;
+}
+
+
+
+    /*Om mig*/
+    .container_mig {
+grid-template-columns: 1fr;
+}
+
+/*Kontakt*/
+.container_kontakt {
+grid-template-columns: 1fr;
+}
+
+/*mobil og email boks*/
+.container_kontakt .kompetencer_oplysninger {
+text-align: center;
+}
+
+/*fjernede line break i brødteksten*/
+.container_kontakt .kompetencer_kontakt br {
+    display: none;
     }
 
-    /*fjernede line break i brødteksten*/
-    .container_kontakt .kompetencer_kontakt br {
-        display: none;
-    }
 }
 
 

@@ -13,6 +13,14 @@
         
     </head>
 <body>
+
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+
+
+
+
     <!--wrapper-->
     <div class="wrapper">
 
@@ -45,8 +53,6 @@
     <div class="indhold">
         <h2>Hej</h2>
         <p>Og velkommen til min portfolio. Her kan du se alle mine udvalgte projekter</p>
-        <!--knap-->
-        <a href="#" class="btn"> Se min portfolio <i class="fas fa-chevron-right"></i></a>
     </div>
 </section>
 
@@ -72,7 +78,7 @@
     <div class="grid-item">
         <img src="./billeder/dans del.1.jpg" alt="Dans, dans, dans del. 1">
         <h4>Dans, dans dans (del. 1)</h4>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <p>Målgruppeanalyse • Personaer • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
@@ -80,7 +86,7 @@
     <div class="grid-item">
         <img src="./billeder/dans del 2.jpg" alt="Dans, dans, dans del. 2">
         <h4>Dans, dans dans (del. 2)</h4>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <p>Målgruppeanalyse • Personaer • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
@@ -88,7 +94,7 @@
     <div class="grid-item">
         <img src="./billeder/video.jpg" alt="Portrætvideo">
         <h4>Portrætvideo</h4>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <p>Målgruppeanalyse • Personaer • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
@@ -96,7 +102,7 @@
     <div class="grid-item">
         <img src="./billeder/modular cars del.1.jpg" alt="Bag rettet del. 1">
         <h4>Bag rettet (del. 1)</h4>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <p>Målgruppeanalyse • Personaer • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
@@ -104,7 +110,7 @@
     <div class="grid-item">
         <img src="./billeder/modular cars del.2.jpg" alt="Bag rettet del. 2">
         <h4>Bag rettet (del. 2)</h4>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <p>Målgruppeanalyse • Personaer • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 </div>
@@ -186,7 +192,7 @@
             <!--tekstboks-->
             <div class="kompetencer_tekstboks">
                 <p>Mit navn er Dennis Zamora Larsen. Jeg er 21 år gammel og bor i Skibby. I øjeblikket læser jeg multimediedesign på Zealand Sjællands Erhvervsakademi i Køge. Jeg er en person som trives med at arbejde sammen med andre i projekter. Jeg elsker at imødekomme nye udfordringer og så går jeg aldrig ind i et projekt uden at gøre det 100% færdigt.</p>
-                <p>Ønsker du at vide mere om min uddannesesbaggrund og tidligere jobs kan du læse mit CV.</p>
+                <p>Ønsker du at vide mere om min uddannelsesbaggrund og tidligere jobs kan du læse mit CV.</p>
                 <!--knap-->
                 <a href="#" class="btn"> Læs mit CV <i class="fas fa-chevron-right"></i></a>
             </div>
@@ -271,7 +277,12 @@
 </footer>
 
 
+<!--kommando som gør at når man trykker på burgermenuen, så kommer class .main-nav ul til at få ".vis" - tilføjet = .main-nav ul.vis. Og dermed bliver den aktiv, hvor den ellers var deaktiveret.-->
+<script>
+    document.querySelector('.menu-btn').addEventListener
+    ('click', () => document.querySelector(".main-nav ul")
+    .classList.toggle('vis')); 
+</script>
 
 </body>
-
 </html>
