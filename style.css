@@ -39,8 +39,17 @@ a {
 /*---Overskrift til sektioner---*/
 .sektion_overskrift {
     text-align: center;
-    font-size: 30px;
-    margin: 40px 0 40px 0;
+    font-size: 40px;
+    margin: 60px 0 60px 0px
+}
+
+
+section {
+    margin-bottom: 150px;
+}
+
+h4 {
+    font-size: 20px;
 }
 /*---SLUT GLOBAL---*/
 
@@ -318,9 +327,7 @@ header #logo h1 {
     width: 80%;
 }
 
-.container_kontakt .kompetencer_kontakt p {
-    margin-bottom: 130px;
-}
+
 
 
 
@@ -376,7 +383,7 @@ footer p {
 
 
 /*----Media queries----*/
-/*only takes effect for 700 pixels or smaller*/
+/*only takes effect for 700 pixels or smaller. For tablets*/
 @media (max-width: 700px) {
     /*velkommen*/
     .sektion_velkommen .indhold {
@@ -439,6 +446,75 @@ footer p {
     }
 
     
+}
+
+
+
+
+
+
+/*Mobilenheder. Alt under 500px der begynder layout nemlig at se lid trængt ud*/
+@media (max-width: 500px) {
+    body {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+
+    /*Wrapper*/
+    .wrapper {
+        width: 90%;
+    }
+
+     /*velkommen*/
+     .sektion_velkommen .indhold {
+        margin-left: 0;
+        margin: auto;
+        text-align: center;
+        padding: 30px 0 0 0 ;
+    }
+
+
+    /*portfolio*/
+    .grid-container {
+    grid-template-columns: 1fr;
+    }
+
+
+
+    /*kompetencer*/
+    .grid-container-kompetencer {
+    grid-template-columns: 1fr;
+    }
+
+    .grid-container-kompetencer div {
+        margin-bottom: 30px;
+    }
+
+
+
+     /*Om mig*/
+     .container_mig {
+    grid-template-columns: 1fr;
+    }
+
+    /*Kontakt*/
+    .container_kontakt {
+    grid-template-columns: 1fr;
+    }
+
+    /*mobil og email boks*/
+    .container_kontakt .kompetencer_oplysninger {
+    text-align: center;
+    }
+
+    /*fjernede line break i brødteksten*/
+    .container_kontakt .kompetencer_kontakt br {
+        display: none;
+    }
 }
 
 
