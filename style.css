@@ -553,10 +553,9 @@ footer p {
 .main-nav ul.vis {
     /*Den overskriver den tidligere kommando med -30rem til at være -2rem*/
     transform: translate(-2rem);
-
-
-
 }
+
+
 /*style links i burgermenu*/
 .main-nav ul li {
     /*padding rundt om links*/
@@ -567,9 +566,7 @@ footer p {
 
 
 
-/*velkommen*/
-.sektion_velkommen .indhold {
-}
+
 
 
 
