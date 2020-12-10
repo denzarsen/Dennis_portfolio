@@ -466,6 +466,8 @@ footer p {
 /*----Media queries----*/
 /*Tager kun effekt for 700px eller smallere*/
 @media (max-width: 700px) {
+
+    /*wrapper*/
     .wrapper {
         width: 90%;
     }
@@ -562,6 +564,10 @@ footer p {
         margin-bottom: 0;
     }
 
+    .btn {
+        font-size: 20px;
+    }
+
 
 
 
@@ -569,7 +575,12 @@ footer p {
 
 
     /*----------------UNDERSIDER----------------------*/
-/*Forsidebillede*/
+body {
+    font-size: 20px;
+}
+
+
+    /*Forsidebillede*/
     .underside_boks img {
     width: 100%;
     height: auto;
@@ -581,16 +592,13 @@ footer p {
 .grid-container-underside {
     margin-left: 60px;
     width: 90%;
+    margin-bottom: 50px;
 }
 
 /*færdig arbejde width*/
 .underside_færdig_arbejde img {
-    width: 80%;
-}
-
-
-
-
+    width: 90%;
+    }
 }
 
 
@@ -661,6 +669,29 @@ text-align: center;
     display: none;
     }
 
+
+
+
+
+
+/*-----------SEKTION TIL UNDERSIDER-------------*/
+.grid-container-underside {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
 }
+
+.section {
+    margin-bottom: 100px;
+}
+
+.underside_færdig_arbejde img {
+    width: 100%;
+}
+
+}
+
 
 
