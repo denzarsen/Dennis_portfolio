@@ -253,6 +253,7 @@ header #logo h1 {
     height: auto;
 }
 
+/*nødvendig på stor skærme. Så billedet er til højre*/
 .container_mig .kompetencer_billede {
     text-align: right;
 }
@@ -372,5 +373,72 @@ footer p {
 
 
 
+
+
+/*----Media queries----*/
+/*only takes effect for 700 pixels or smaller*/
+@media (max-width: 700px) {
+    /*velkommen*/
+    .sektion_velkommen .indhold {
+        margin-left: 0;
+    }
+
+
+
+    /*portfolio*/
+    .grid-container {
+    grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    /*kompetencer*/
+    .grid-container-kompetencer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+
+
+
+
+    /*Om mig*/
+    .container_mig {
+    grid-template-columns: 1fr 1fr;
+    }
+    /*Om mig billede*/
+    .container_mig img {
+    width: 100%;
+    margin: auto;
+    }
+    /*Om mig billede. Fordi det var det som gjorde billedet lå til højre på større enheder*/
+    .container_mig .kompetencer_billede {
+    text-align: none;
+    }
+    /*Om mig tekstboks*/
+    .container_mig .kompetencer_tekstboks {
+    margin-top: 0;
+    width: 100%;
+    }
+
+
+
+
+    /*Kontakt*/
+    /*mobil og email*/
+    .container_kontakt .kompetencer_oplysninger {
+        margin-left: 0;
+    }
+
+    /**/
+    .container_kontakt .kompetencer_kontakt {
+        width: 100%;
+    }
+    /*Kontakt brødtekstboks*/
+    .container_kontakt .kompetencer_kontakt p {
+        margin-bottom: 0;
+    }
+
+    
+}
 
 
