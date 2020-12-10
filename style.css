@@ -66,6 +66,24 @@ h4 {
     /*Ønsker ikke at vise den til desktop version*/
     display: none;
 }
+
+
+/*button*/
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #0B7AF3;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+ .btn:hover {
+    opacity: 0.8;
+}
+
 /*---SLUT GLOBAL---*/
 
 
@@ -171,21 +189,7 @@ header #logo h1 {
     margin: 10px 0 20px 0;
 }
 
-/*button*/
-.sektion_velkommen .btn {
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #0B7AF3;
-    font-size: 15px;
-    margin-top: 20px;
-}
 
-.sektion_velkommen .btn:hover {
-    opacity: 0.8;
-}
 
 
 
@@ -314,15 +318,6 @@ header #logo h1 {
 
 
 
-
-
-
-
-
-
-
-
-
 /*---Kontakt---*/
 .container_kontakt {
     display: grid;
@@ -345,43 +340,6 @@ header #logo h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.underside_boks {
-    text-align: center;
-}
-
-.underside_boks h3 {
-    font-size: 35px;
-}
-
-.underside_boks img {
-    width: 40%;
-}
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
 /*--Footer---*/
 footer {
     padding: 20px;
@@ -397,9 +355,121 @@ footer p {
 
 
 
+
+
+
+/*------------------NY SEKTION TIL UNDERSIDER---------------------*/
+
+
+
+/*------Forsideboks Rumrejsen-----*/
+.underside_boks {
+    text-align: center;
+}
+
+.underside_boks h3 {
+    font-size: 35px;
+}
+
+.underside_boks img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+
+
+
+/*Underside boks 2 med opgave, løsning, rolle, produkt*/
+.underside {
+    text-align: center;
+}
+
+
+/*----4 punkter til beskrivelse af opgaven---*/
+.grid-container-underside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 20px;
+    text-align: left;
+    margin: auto;
+    width: 70%;
+    margin-left: 200px;
+}
+
+.grid-container-underside img {
+    width: 25%;
+    height: auto;
+}
+
+.test {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*sektion med færdig arbejde*/
+.underside_færdig_arbejde {
+    text-align: center;
+}
+
+.underside_færdig_arbejde h3 {
+    font-size: 35px;
+}
+
+.underside_færdig_arbejde img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----Media queries----*/
-/*only takes effect for 700 pixels or smaller. For tablets*/
+/*Tager kun effekt for 700px eller smallere*/
 @media (max-width: 700px) {
+    .wrapper {
+        width: 90%;
+    }
+
 
     /*burgermenu*/
     .menu-btn {
@@ -441,32 +511,21 @@ footer p {
         transform: translate(-30px);
     }
 
-
-
-
-
-
     /*velkommen*/
     .sektion_velkommen .indhold {
         margin-left: 0;
     }
-
-
 
     /*portfolio*/
     .grid-container {
     grid-template-columns: 1fr 1fr;
     }
 
-
-
     /*kompetencer*/
     .grid-container-kompetencer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     }
-
-
 
 
     /*Om mig*/
@@ -488,9 +547,6 @@ footer p {
     width: 100%;
     }
 
-
-
-
     /*Kontakt*/
     /*mobil og email*/
     .container_kontakt .kompetencer_oplysninger {
@@ -506,7 +562,35 @@ footer p {
         margin-bottom: 0;
     }
 
-    
+
+
+
+
+
+
+    /*----------------UNDERSIDER----------------------*/
+/*Forsidebillede*/
+    .underside_boks img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+/*opgave, løsning, rolle, produkt*/
+.grid-container-underside {
+    margin-left: 60px;
+    width: 90%;
+}
+
+/*færdig arbejde width*/
+.underside_færdig_arbejde img {
+    width: 80%;
+}
+
+
+
+
 }
 
 
