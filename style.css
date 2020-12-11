@@ -110,6 +110,19 @@ h4 {
     color: black;
 }
 
+.CV{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 0.6rem 0.6rem;
+    background-color: #0B7AF3;
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: black;
+    text-align: center;
+}
+
  .btn:hover {
     opacity: 0.8;
 }
@@ -336,11 +349,12 @@ header #logo h1:hover {
 
 /*Om mig tekstboks*/
 .container_mig .kompetencer_tekstboks {
-    text-align: left;
+    
     margin-top: 1rem;
     /*Så det matcher med billedets width*/
     width: 80%;
 }
+
 
 /*Selve p tag*/
 .container_mig .kompetencer_tekstboks p {
