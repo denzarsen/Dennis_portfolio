@@ -98,6 +98,18 @@ h4 {
     color: black;
 }
 
+.knap {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 0.6rem 0.6rem;
+    background-color: #0B7AF3;
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: black;
+}
+
  .btn:hover {
     opacity: 0.8;
 }
