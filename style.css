@@ -1,3 +1,4 @@
+/*Gælder for alt*/
 * {
     /*f.eks. padding medregret i totale width af element*/
     box-sizing: border-box;
@@ -6,42 +7,99 @@
 }
 
 body {
+    /*Anvender REM (relative length). Default er 16px = 1 REM*/
+    font-size: 16px; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
     line-height: 1.5;
     background: #f4f4f4;
 }
 
-/*GLOBAL ----ting som virker for alt*/
+
+
+/*----------------GLOBALE INDSTILLINGER----------------*/
+
 /*wrapper*/
 .wrapper {
     /*procent så den er responsiv*/
     width: 80%;
-    margin: auto;
-    /*width vil fylde 80% af bredden indtil den når 1200px. Derefter vil der være mere white space*/
+    /*width vil fylde 80% af bredden indtil den når 1200px.*/
     max-width: 1200px;
-    /*hvis noget kommer uden for container får du ikke en scrollbar f.eks. dine bulletpoints stikker ud*/
+    margin: auto;
+    /*Hvis indholdet er større end containeren, vil den blive klippet og resten af indholdet vil blive usynligt*/
     overflow: hidden;
 }
+
+
+
 
 ul {
     /*ul har pre- margin og padding. Så vi fjerner dem*/
     margin: 0;
     padding: 0;
+    /*Fjerner bulletpoints*/
     list-style: none;
 }
+
 
 a {
     color: black;
 }
 
 
-/*---Overskrift til sektioner---*/
+/*----------------OVERSKRIFTER----------------------*/
+/*(h1 Logo)*/
+
+/*(h2) Hej i velkommen*/
+
+/*(h3) Overskrift til afsnit*/
 .sektion_overskrift {
     text-align: center;
-    font-size: 30px;
-    margin: 40px 0 40px 0;
+    font-size: 4rem;
+    margin: 4rem 0 4rem 0
 }
+
+/*(h4) Overskrift til indhold f.eks. portfolio projekter, kompetencer, */
+h4 {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/*Burgermenu - knappen*/
+.menu-btn {
+    /*Så den kan peges på*/
+    cursor: pointer;
+    /*taget ud af hjemmesidens normale flow. Placeret ift. første positionerede forældre element*/
+    position: absolute;
+    /*position absolute top*/
+    top: 1rem;
+    /*from right 20px*/
+    right: 2.2rem;
+    /*så den kan flyde oven på eksiterende elementer = svæver. Positiv stack order. Så vil svæve foran elementer*/
+    z-index: 2;
+    /*Ønsker ikke at vise burgermenuen til desktop version*/
+    display: none;
+}
+
+
+/*Default styling for den blå knap*/
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 0.6rem 0.6rem;
+    background-color: #0B7AF3;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+ .btn:hover {
+    opacity: 0.8;
+}
+
 /*---SLUT GLOBAL---*/
 
 
@@ -49,53 +107,61 @@ a {
 
 
 
-/*----header for hovedmenu-----*/
-
-
+/*----HEADER MED NAVIGATIONSMENU-----*/
 
 /*logo*/
 header #logo{
+    cursor: pointer;
+    /*Billede vil flyde til venstre*/
     float: left;
     color: #0B7AF3;
 }
 
+/*(h1) selve logo med navn*/
 header #logo h1 {
     margin: 0;
 }
 
+header #logo h1:hover {
+    opacity: 0.5;
+}
 
 
-/*--Nav--*/
+/*--BOKS FOR NAVIGATIONSMENU MED LOGO OG LINKS*/
 .main-nav {
     /*viser alle de indre items til flex items. Og opstiller dem horizontalt*/
     display: flex;
+    /*centrer elementerne*/
     align-items: center;
     /*minimumshøjde, så kan den altid udvide sig efter indhold*/
-    min-height: 70px;
-    padding: 20px 0;
-    font-size: 16px;
+    min-height: 5rem;
+    /*padding top og bund*/
+    padding: 1rem 0;
+    font-size: 1rem;
+    /*fordeler overskydende plads imellem logo og navigationslinks*/
     justify-content: space-between;
 }
 
 .main-nav ul {
-    /*nu er alle elementerne i listen også vist horizontalt*/
+    /*nu er alle elementerne i unordered list også vist horizontalt*/
     display: flex;
 }
 
 .main-nav ul li {
     /*padding kun til venstre*/
-    padding: 0 0 0 30px;
+    padding: 0 0 0 3rem;
 }
 
 .main-nav ul li a{
     color: #0B7AF3;
     text-decoration: none;
     /*skubber padding for hover stregen længere ned*/
-    padding-bottom: 2px;
+    padding-bottom: 0.2rem;
 }
 
 .main-nav ul li a:hover {
-       border-bottom: 2px solid #FFF55F;
+    /*tykkelsen på hover stregen*/
+       border-bottom: 0.1rem solid #263544;
 }
 
 
@@ -119,48 +185,23 @@ header #logo h1 {
 
 
 
-/*---velkommen----*/
+/*-----------SEKTION VELKOMMEN--------------*/
 
-
- 
 /*Velkommen*/
 .sektion_velkommen {
     width: 100%;
-    height: 350px;
-    /*image location, repeat, position og size properties*/
-    background: url(./billeder/designbillede.jpg) no-repeat center center/cover;
-    margin-bottom: 50px;
+    height: 10rem;
 }
 
 .sektion_velkommen .indhold {
-    width: 80%;
-    padding: 50px 0 0 50px;
-    margin-left: 100px;
-    color: white;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    color: black;
+    text-align: center;
 }
 
-.sektion_velkommen h2, .velkommen p {
-    margin-bottom: 20px;
-}
-
-.sektion_velkommen p {
-    margin: 10px 0 20px 0;
-}
-
-/*button*/
-.sektion_velkommen .btn {
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #0B7AF3;
-    font-size: 15px;
-    margin-top: 20px;
-}
-
-.sektion_velkommen .btn:hover {
-    opacity: 0.8;
+.sektion_velkommen h2 {
+    margin-bottom: 2rem;
 }
 
 
@@ -175,37 +216,48 @@ header #logo h1 {
 
 
 
-/*-----Portfolio------*/
+
+
+
+
+/*----------------SEKTION PORTFOLIO-------------------*/
+
+/*Grid*/
 .grid-container {
     /*intet sker før du har defineret columns og rows.*/
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 50px;
-    margin-bottom: 40px;
+    grid-column-gap: 3rem;
 }
 
 
+/*individuelle grid bokse*/
 .grid-item {
-    margin-bottom: 40px;
+    /*afstand nedenunder boksene*/
+    margin-bottom: 3rem;
 }
 
 /*billederne ville gå ud af deres grid column, hvis ikke vi definerede deres width*/
 .grid-item img {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0.1rem;
 }
 
-.grid-item h3 {
-    margin-bottom: 5px;
+.grid-item h4 {
+    /*overskrifter i portfolio projekter*/
+    margin-bottom: 0.1rem;
 }
+
+/*Læs mere links*/
 .grid-item a {
-    /*det er inline ved default*/
+    /*det er inline ved default. Inline-block tillader at sætte en width og height*/
     display: inline-block;
     color: #0067b8;
-    padding-top: 10px;
+    padding-top: 0.5rem;
     font-weight: bold;
 }
+
 .grid-item a:hover {
     opacity: 0.5;
 }
@@ -216,43 +268,75 @@ header #logo h1 {
 
 
 
-/*---Om mig---*/
-.container_mig {
+
+/*---------------SEKTION KOMPETENCER----------------------*/
+/*Grid*/
+.grid-container-kompetencer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    text-align: center;
     margin: auto;
 }
 
-.container_mig img {
-    width: 60%;
+/*Størrelse på individuelle billeder*/
+.grid-container-kompetencer img {
+    width: 25%;
     height: auto;
 }
 
+
+
+
+
+
+
+
+
+
+/*---------------------SEKTION OM MIG--------------------*/
+/*Grid*/
+.container_mig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    margin: auto;
+}
+
+/*Billede af mig*/
+.container_mig img {
+    width: 80%;
+    height: auto;
+}
+
+/*nødvendig på stor skærme. Så billedet er til højre side*/
 .container_mig .kompetencer_billede {
     text-align: right;
 }
 
+/*Om mig tekstboks*/
 .container_mig .kompetencer_tekstboks {
     text-align: left;
-    margin-top: 40px;
+    margin-top: 1rem;
+    /*Så det matcher med billedets width*/
     width: 80%;
 }
 
+/*Selve p tag*/
 .container_mig .kompetencer_tekstboks p {
-    margin-bottom: 130px;
+    margin-bottom: 2rem;
 }
 
-/*button*/
+/*Knap til CV*/
 .container_mig .btn {
     cursor: pointer;
     display: inline-block;
     border: 0;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 0.6rem 0.6rem;
     background-color: #0B7AF3;
-    font-size: 15px;
-    margin-top: 20px;
+    font-size: 1rem;
+    margin-top: 2rem;
 }
 
 .container_mig .btn:hover {
@@ -265,17 +349,96 @@ header #logo h1 {
 
 
 
-
-/*----Kompetencer---*/
-.grid-container-kompetencer {
+/*--------------------  SEKTION KONTAKT-----------------------*/
+/*Grid*/
+.container_kontakt {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
     margin: auto;
+    margin-bottom: 6rem;
 }
 
-.grid-container-kompetencer img {
+/*Boks med mobil og email*/
+.container_kontakt .kompetencer_oplysninger {
+    text-align: left;
+    /*For at teksten kan stå bedst mod midten*/
+    margin-left: 60%;
+    
+}
+/*Boks med brødtekst*/
+.container_kontakt .kompetencer_kontakt {
+    text-align: left;
+    /*80% så det passer bedre med mobil og email på 60%*/
+    width: 80%;
+}
+
+
+
+
+/*--------------------SEKTION FOOTER----------------------*/
+footer {
+    /*Padding top og bund*/
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    /*Så den ikke står så tæt på stregen*/
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------NY SEKTION TIL UNDERSIDER---------------------*/
+
+
+
+/*------Forsideboks Rumrejsen-----*/
+.underside_boks {
+    text-align: center;
+}
+
+
+/*Forsidebillede*/
+.underside_forsidebillede {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+
+
+
+/*Underside boks 2: opgave, løsning, rolle, produkt*/
+.underside {
+    text-align: center;
+}
+
+
+/*----4 punkter til beskrivelse af opgaven---*/
+.grid-container-underside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    grid-gap: 3rem;
+    margin: auto;
+    width: 50%;
+}
+
+.grid-container-underside img {
     width: 25%;
     height: auto;
 }
@@ -293,6 +456,22 @@ header #logo h1 {
 
 
 
+
+/*sektion med færdig arbejde*/
+.underside_færdig_arbejde {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.underside_færdig_arbejde h3 {
+    font-size: 2rem;
+}
+
+.underside_færdig_arbejde img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
  
 
 
@@ -306,18 +485,279 @@ header #logo h1 {
 
 
 
-/*--Footer---*/
-footer {
-    padding: 20px;
-    margin-top: 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------MEDIA QUERIES 700PX------------------*/
+
+/*Tager kun effekt for 700px eller smallere skærme*/
+@media (max-width: 700px) {
+
+/*wrapper*/
+.wrapper {
+    width: 90%;
+}
+
+.sektion_overskrift {
+    font-size: 2.5rem;
+}
+
+/*burgermenu*/
+.menu-btn {
+ /*nu vises burgermenuen ved 700px eller mindre*/
+    display: block;
+}
+
+
+/*links til burgermenuen*/
+.main-nav ul {
+    display: block;
+    /*taget ud af almindelige flow. Placeres ved nærmeste forældre*/
+    position: absolute;
+    /*placering af top fra position nærmeste forældre*/
+    top: 0;
+    /*Venstre side fra position af nærmeste forældre*/
+    left: 0;
+    /*Farve på baggrunden*/
+    background: lightgrey;
+    /*fylder halvdelen af skærmen i width*/
+    width: 50%;
+    /*100% af højden*/
+    height: 100%;
+    /*Når burgermenu ikonet klikkes. Vil transform gå fra -30rem (hvor sidemenuen ikke er synlig) til -2rem hvor sidemenuen netop er synlig.Kommandoen nedenunder skubber sidemenuen -30rem ud til venstre i x-aksen så vi ikke kan se menuen INDTIl brugermenuen klikkes.*/
+    transform: translate(-30rem);
+    /*slide in effekt. Transition venter på transform gør noget, så begynder transitionen med animation*/
+    transition: transform 0.5s ease-in-out;
+
+    /*Paddin rundt om hele boksen af links og understreg. Kun top og højre side man kan se. Ser lidt bedre ud når stregene ikke rør højre side*/
+    padding: 1rem;
+    /*Så links ikke er helt op af venstre side*/
+    padding-left: 2rem;
+}
+
+/*Kommando som gør sidemenuen fra usynlig med -30rem afstand til synlighed med -2rem på venstre side af skærmen*/
+.main-nav ul.vis {
+    /*Den overskriver den tidligere kommando med -30rem til at være -2rem*/
+    transform: translate(-2rem);
+
+
+
+}
+/*style links i burgermenu*/
+.main-nav ul li {
+    /*padding rundt om links*/
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-bottom: blue 0.01rem solid;
+}
+
+
+
+
+
+
+
+
+
+
+/*portfolio*/
+.grid-container {
+grid-template-columns: 1fr 1fr;
+}
+
+/*kompetencer*/
+.grid-container-kompetencer {
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+}
+
+
+/*Om mig*/
+.container_mig {
+grid-template-columns: 1fr 1fr;
+}
+/*Om mig billede*/
+.container_mig img {
+width: 100%;
+margin: auto;
+}
+/*Om mig billede. Fordi det var det som gjorde billedet lå til højre på større enheder*/
+.container_mig .kompetencer_billede {
+text-align: none;
+}
+/*Om mig tekstboks*/
+.container_mig .kompetencer_tekstboks {
+margin-top: 0;
+width: 100%;
+}
+
+
+.container_mig .btn {
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/*Kontakt*/
+/*mobil og email*/
+.container_kontakt .kompetencer_oplysninger {
+    margin-left: 0;
+}
+
+/**/
+.container_kontakt .kompetencer_kontakt {
+    width: 100%;
+}
+/*Kontakt brødtekstboks*/
+.container_kontakt .kompetencer_kontakt p {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+    /*----------------UNDERSIDER----------------------*/
+body {
+    font-size: 1rem;
+}
+
+
+    /*Forsidebillede*/
+    .underside_boks img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+
+/*opgave, løsning, rolle, produkt*/
+.grid-container-underside {
+    margin-left: 3.5rem;
+    width: 90%;
+    margin-bottom: 503rem;
+}
+
+/*færdig arbejde width*/
+.underside_færdig_arbejde img {
+    width: 90%;
+    }
+}
+
+
+
+
+
+
+
+/*----------------MEDIA QUERIES 500PX------------------*/
+
+/*Mobilenheder. Alt under 500px der begynder layout nemlig at se lid trængt ud*/
+@media (max-width: 600px) {
+body {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+
+/*Wrapper*/
+.wrapper {
+    width: 90%;
+}
+
+    /*velkommen*/
+    .sektion_velkommen .indhold {
+    margin-left: 0;
+    margin: auto;
     text-align: center;
-}
-
-footer p {
-    margin-top: 20px;
+    padding: 30px 0 0 0 ;
 }
 
 
+/*portfolio*/
+.grid-container {
+grid-template-columns: 1fr;
+}
+
+
+
+/*kompetencer*/
+.grid-container-kompetencer {
+grid-template-columns: 1fr;
+}
+
+.grid-container-kompetencer div {
+    margin-bottom: 30px;
+}
+
+
+
+    /*Om mig*/
+    .container_mig {
+grid-template-columns: 1fr;
+}
+
+/*Kontakt*/
+.container_kontakt {
+grid-template-columns: 1fr;
+}
+
+/*mobil og email boks*/
+.container_kontakt .kompetencer_oplysninger {
+text-align: center;
+}
+
+/*fjernede line break i brødteksten*/
+.container_kontakt .kompetencer_kontakt br {
+    display: none;
+    }
+
+
+
+
+
+
+/*-----------SEKTION TIL UNDERSIDER-------------*/
+.grid-container-underside {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.section {
+    margin-bottom: 100px;
+}
+
+.underside_færdig_arbejde img {
+    width: 100%;
+}
+
+}
 
 
 

@@ -13,24 +13,33 @@
         
     </head>
 <body>
+
+    <!--Burgermenu-knappen-->
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+
+
+
+
     <!--wrapper-->
     <div class="wrapper">
 
 
     <!--navigationsmenu med logo og links-->
-        <header>
+        <header class="fixed">
                 <!--navigation-->
                 <nav class="main-nav">
                     <!--logo-->
                     <div id="logo">
-                        <h1>Dennis Larsen</h1>
+                        <h1 id="forside">Dennis Larsen</h1>
                     </div>
                     <!--navigationslinks-->
                     <ul class="main-menu">
-                        <li><a href="#Forside">Forside</a></li>
-                        <li><a href="#Portfolio">Portfolio</a></li>
-                        <li><a href="#Ommig">Om mig</a></li>
-                        <li><a href="Kontakt">Kontakt</a></li>
+                        <li><a href="#forside">Forside</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#ommig" >Om mig</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
                     </ul>
                 </nav>         
         </header>
@@ -44,9 +53,8 @@
     <!--indhold indeni-->
     <div class="indhold">
         <h2>Hej</h2>
-        <p>Og velkommen til min portfolio. Her kan du se alle mine udvalgte projekter</p>
-        <!--knap-->
-        <a href="#" class="btn"> Se min portfolio <i class="fas fa-chevron-right"></i></a>
+        <p>Og velkommen til min portfolio. <br>
+        Her kan du se alle mine udvalgte projekter.</p>
     </div>
 </section>
 
@@ -55,58 +63,86 @@
 
 <!--Portfolio-->
 <section>
-    <h3 class="sektion_overskrift">Portfolio</h3>
+    <h3 class="sektion_overskrift" id="portfolio">Portfolio</h3>
+
+
+
 <!--grid container-->
 <div class="grid-container">
+
+
+
+
+
+
     <!--hvert grid item-->
 
     <!--rumrejsen-->
     <div class="grid-item">
-        <img src="./billeder/rumrejsen.jpg" alt="Billede af rumrejsen">
-        <h3>Rumrejsen</h3>
-        <p>Website • Photoshop • Sketches / 2020</p>
+        <a href="#"><img src="./billeder/rumrejsen.jpg" alt="Rumrejsen"></a>
+        <h4>Rumrejsen</h4>
+        <p>Website • Photoshop/ 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
+
+
+
+
+
+
 
     <!--dans del. 1-->
     <div class="grid-item">
-        <img src="./billeder/dans del. 1.jpg" alt="Billede af rumrejsen">
-        <h3>Dans, dans dans (del. 1)</h3>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <img src="./billeder/dans del.1.jpg" alt="Dans, dans, dans del. 1">
+        <h4>Dans (del. 1)</h4>
+        <p>Målgruppeanalyse • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
+
+
+
+
+
     <!--dans del. 2-->
     <div class="grid-item">
-        <img src="./billeder/dans del. 2.jpg" alt="Billede af rumrejsen">
-        <h3>Dans, dans dans (del. 2)</h3>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <img src="./billeder/dans del 2.jpg" alt="Dans, dans, dans del. 2">
+        <h4>Dans (del. 2)</h4>
+        <p>Målgruppeanalyse • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
     <!--video-->
     <div class="grid-item">
-        <img src="./billeder/video.jpg" alt="Billede af rumrejsen">
-        <h3>Video</h3>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <img src="./billeder/video.jpg" alt="Portrætvideo">
+        <h4>Portrætvideo</h4>
+        <p>Målgruppeanalyse • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
     <!--bag rettet del. 1-->
     <div class="grid-item">
-        <img src="./billeder/bag rettet del. 1.jpg" alt="Billede af rumrejsen">
-        <h3>Bag rettet (del. 1)</h3>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <img src="./billeder/modular cars del.1.jpg" alt="Bag rettet del. 1">
+        <h4>Bag rettet (del. 1)</h4>
+        <p>Målgruppeanalyse • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
 
     <!--bag rettet del. 2-->
     <div class="grid-item">
-        <img src="./billeder/bag rettet del.2.jpg" alt="Billede af rumrejsen">
-        <h3>Bag rettet (del. 1)</h3>
-        <p>Målgruppeanalyse • Personaer • Prototype• UX / 2020</p>
+        <img src="./billeder/modular cars del.2.jpg" alt="Bag rettet del. 2">
+        <h4>Bag rettet (del. 2)</h4>
+        <p>Målgruppeanalyse • Prototype • UX / 2020</p>
         <a href="#">Læs mere <i class="fas fa-chevron-right"></i></a>
     </div>
+
+
+
+
+
+
+
+    
 </div>
 </section>
 
@@ -134,36 +170,60 @@
 <section>
     <!--overskrift-->
     <h3 class="sektion_overskrift">Kompetencer</h3>
+
+
+
         <!--grid container-->
         <div class="grid-container-kompetencer">
+
+
+
             <!--box-->
             <!--grafisk design-->
             <div>
-                <img src="./billeder/grafisk_design.png">
-                <h3>Grafisk design</h3>
-                <p>Jeg bruger meget tid i Photoshop på at udvikle grafiske elementer som f.eks. bannere, logoer, plakater.</p>
+                <img src="./billeder/grafisk_design.png" alt="grafisk design">
+                <h4>Grafisk design</h4>
+                <p>Jeg er godt bekendt med Adobe pakken og alle dens programmer. <br>Kan f.eks. lave bannere, logoer, plakater.</p>
             </div>
+
+
+
+
 
             <!--webdesign-->
             <div>
-                <img src="./billeder/webdesign.png">
-                <h3>Webdesign</h3>
+                <img src="./billeder/webdesign.png" alt="webdesign">
+                <h4>Webdesign</h4>
                 <p>Har sans for detaljer når jeg arbejder med udformning af brugervenlige brugergrænseflader med godt design.</p>
             </div>
 
+
+
+
+
             <!--kommunikation-->
             <div>
-                <img src="./billeder/kommunikation.png">
-                <h3>Kommunikation</h3>
-                <p>Jeg forstår at målrette medieindhold til segmenter i kommunikationssammenhænge. </p>
+                <img src="./billeder/kommunikation.png" alt="kommunikation">
+                <h4>Kommunikation</h4>
+                <p>Jeg forstår at målrette og analysere medieindhold til brugersegmenter i kommunikationssammenhænge. </p>
             </div>
+
+
+
+
 
             <!--digital markedsføring-->
             <div>
-                <img src="./billeder/digital_markedsføring.png">
-                <h3>Digital markedsføring</h3>
-                <p>Ved hvordan man går fra ide til færdigt produkt. Hvordan man målrettet når ud til målgruppen.</p>
+                <img src="./billeder/digital_markedsføring.png" alt="digital markedsføring">
+                <h4>Digital markedsføring</h4>
+                <p>Ved hvordan man går fra ide til færdigt produkt og hvordan man får det største udbytte.</p>
             </div> 
+
+
+
+
+
+
 
         </div>
 </section>
@@ -176,18 +236,46 @@
 <!--Om mig-->
 <section>
     <!--overskrift-->
-    <h3 class="sektion_overskrift">Om mig</h3>
+    <h3 class="sektion_overskrift" id="ommig">Om mig</h3>
         <!--grid container-->
         <div class="container_mig">
             <!--billede-->
             <div class="kompetencer_billede">
-                <img src="./billeder/christian.jpg">
+                <img src="./billeder/om_mig_billede.jpg" alt="Billede om mig">
             </div>
             <!--tekstboks-->
             <div class="kompetencer_tekstboks">
-                <p>Mit navn er Dennis Larsen. Jeg er 21 år gammel og bor i Skibby. I øjeblikket læser jeg multimediedesign på Zealand Sjællands Erhvervsakademi i Køge. Jeg er en person som trives med at arbejde sammen med andre i projekter. Jeg elsker at imødekomme nye udfordringer og så går jeg aldrig ind i et projekt uden at gøre det 100% færdigt.</p>
+                <p>Mit navn er Dennis Zamora Larsen. Jeg er 21 år gammel og bor i Skibby. I øjeblikket læser jeg multimediedesign på Zealand Sjællands Erhvervsakademi i Køge. Jeg er en person som trives med at arbejde sammen med andre i projekter. Jeg elsker at imødekomme nye udfordringer og så går jeg aldrig ind i et projekt uden at gøre det 100% færdigt.</p>
+                <p>Ønsker du at vide mere om min uddannelsesbaggrund og tidligere jobs kan du læse mit CV.</p>
                 <!--knap-->
                 <a href="#" class="btn"> Læs mit CV <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+        </div>
+        
+</section>
+
+
+
+
+
+
+
+<!--Kontakt-->
+<section>
+    <!--overskrift-->
+    <h3 class="sektion_overskrift" id="kontakt">Kontakt</h3>
+        <!--grid container-->
+        <div class="container_kontakt">
+            <!--billede-->
+            <div class="kompetencer_oplysninger">
+                
+                <p><b>Mobil:</b> +45 25117969</p>
+                <p><b>Email:</b> Denzarsen@gmail.com</p>
+            </div>
+            <!--tekstboks-->
+            <div class="kompetencer_kontakt">
+                <p>Har du et projekt i tankerne? Og ønsker du hjælp til udførsel. <br>Om det end omfatter visuel identitet, content på sociale medier, udvikling af hjemmesider. Eller om du måske har en jobstilling du tænker passer godt til mig, så er du hjertelig velkommen til at kontakte mig.</p>
             </div>
         </div>
 </section>
@@ -245,7 +333,12 @@
 </footer>
 
 
+<!--kommando som gør at når man trykker på burgermenuen, så kommer class .main-nav ul til at få ".vis" - tilføjet = .main-nav ul.vis. Og dermed bliver den aktiv, hvor den ellers var deaktiveret.-->
+<script>
+    document.querySelector('.menu-btn').addEventListener
+    ('click', () => document.querySelector(".main-nav ul")
+    .classList.toggle('vis')); 
+</script>
 
 </body>
-
 </html>
