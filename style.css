@@ -42,7 +42,8 @@ ul {
 
 
 a {
-    color: black;
+    color: #0B7AF3;
+    text-decoration: none;
 }
 
 
@@ -337,6 +338,7 @@ header #logo h1:hover {
     background-color: #0B7AF3;
     font-size: 1rem;
     margin-top: 2rem;
+    color: black;
 }
 
 .container_mig .btn:hover {
