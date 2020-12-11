@@ -22,6 +22,11 @@
         
     </head>
 <body>
+
+     <!--Burgermenu-knappen-->
+     <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
     <!--wrapper-->
     <div class="wrapper">
 
@@ -163,7 +168,12 @@
 </footer>
 
 
-
+<!--kommando som gør at når man trykker på burgermenuen, så kommer class .main-nav ul til at få ".vis" - tilføjet = .main-nav ul.vis. Og dermed bliver den aktiv, hvor den ellers var deaktiveret.-->
+<script>
+    document.querySelector('.menu-btn').addEventListener
+    ('click', () => document.querySelector(".main-nav ul")
+    .classList.toggle('vis')); 
+</script>
 </body>
 
 </html>
