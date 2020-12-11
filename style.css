@@ -77,7 +77,7 @@ h4 {
     /*position absolute top*/
     top: 1rem;
     /*from right 20px*/
-    right: 2.2rem;
+    right: 1rem;
     /*så den kan flyde oven på eksiterende elementer = svæver. Positiv stack order. Så vil svæve foran elementer*/
     z-index: 2;
     /*Ønsker ikke at vise burgermenuen til desktop version*/
